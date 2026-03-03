@@ -20,8 +20,7 @@ LIGHT='\033[0;37m'
 rm -f -- "$0"
 
 # Variabel
-owner="sipitongyo"
-gitlink="https://raw.githubusercontent.com"
+HOST="https://raw.githubusercontent.com/iFHax/LITEMOD/main"
 
 # ==================================================
 #  Start SSH WebSocket via tmux
