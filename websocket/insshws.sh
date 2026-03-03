@@ -20,8 +20,7 @@ LIGHT='\033[0;37m'
 rm -f -- "$0"
 
 # Variabel
-owner="sipitongyo"
-gitlink="https://raw.githubusercontent.com"
+HOST="https://raw.githubusercontent.com/iFHax/LITEMOD/main"
 
 set -e
 cd
@@ -31,9 +30,9 @@ cd
 # ==================================================
 echo "[INFO] Memasang skrip WebSocket..."
 
-wget -O /usr/local/bin/ws-openssh "${gitlink}/${int}/${sc}/main/sshws/openssh-socket.py"
-wget -O /usr/local/bin/ws-dropbear "${gitlink}/${int}/${sc}/main/sshws/dropbear-ws.py"
-wget -O /usr/local/bin/ws-stunnel "${gitlink}/${int}/${sc}/main/sshws/ws-stunnel"
+wget -O /usr/local/bin/ws-openssh "${HOST}/websocket/openssh-socket.py"
+wget -O /usr/local/bin/ws-dropbear "${HOST}/websocket/dropbear-ws.py"
+wget -O /usr/local/bin/ws-stunnel "${HOST}/websocket/ws-stunnel"
 
 chmod +x /usr/local/bin/ws-openssh
 chmod +x /usr/local/bin/ws-dropbear
@@ -44,8 +43,8 @@ chmod +x /usr/local/bin/ws-stunnel
 # ==================================================
 echo "[INFO] Memasang service systemd..."
 
-wget -O /etc/systemd/system/ws-dropbear.service "${gitlink}/${int}/${sc}/main/sshws/service-wsdropbear"
-wget -O /etc/systemd/system/ws-stunnel.service "${gitlink}/${int}/${sc}/main/sshws/ws-stunnel.service"
+wget -O /etc/systemd/system/ws-dropbear.service "${HOST}/websocket/service-wsdropbear"
+wget -O /etc/systemd/system/ws-stunnel.service "${HOST}/websocket/ws-stunnel.service"
 
 chmod +x /etc/systemd/system/ws-dropbear.service
 chmod +x /etc/systemd/system/ws-stunnel.service
@@ -69,4 +68,4 @@ echo "✅ WebSocket Tunneling Installed"
 echo "Service aktif  : ws-dropbear, ws-stunnel"
 echo "=============================================="
 
-rm -f insshws.sh 2>/dev/null
+rm -f inwebsocket.sh 2>/dev/null
