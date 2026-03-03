@@ -19,7 +19,7 @@ ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
 rm -f -- "$0"
  
-HOST="https://raw.githubusercontent.com/sipitongyo/LITEMOD/main"
+HOST="https://raw.githubusercontent.com/iFHax/LITEMOD/main"
 
 # Cek root dan OpenVZ
 if [[ $EUID -ne 0 ]]; then
