@@ -115,7 +115,7 @@ fi
 echo -e "[ ${green}INFO${NC} ] Setup completed."
 
 #clean config
-rm -rf /usr/local/etc/xray/*.json
+rm /usr/local/etc/xray/*.json
 
 # set uuid
 uuid=$(cat /proc/sys/kernel/random/uuid)
